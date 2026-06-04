@@ -7,10 +7,12 @@
 
 (function() {
     'use strict';
+    
     const logo = document.querySelector('#logo');
     if (logo) {
         logo.remove();
     }
+
     const style = document.createElement('style');
     style.textContent = `
   @media screen and (max-width: 800px), screen and (max-height: 600px) {
