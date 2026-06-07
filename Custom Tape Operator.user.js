@@ -1,22 +1,35 @@
 // ==UserScript==
 // @name         Custom Tape Operator
 // @icon         https://tapeop.dev/assets/favicon.png
-// @version      0.0.2
+// @version      0.0.3
 // @match        https://tapeop.dev/*
 // ==/UserScript==
 
 (function() {
     'use strict';
-    
+
     const logo = document.querySelector('#logo');
     if (logo) {
         logo.remove();
     }
 
+    const footer = document.querySelector('#footer');
+    if (footer) {
+        footer.remove();
+    }
+
     const style = document.createElement('style');
     style.textContent = `
+  #sources :first-child {
+	  margin-left: 0;
+  }
+
+  #sources {
+    justify-content: center !important;
+  }
   @media screen and (max-width: 800px), screen and (max-height: 600px) {
     #container {
+      padding: 1.5rem;
       padding-left: 0 !important;
       padding-right: 0 !important;
     }
@@ -24,10 +37,10 @@
     #header,
     #sources,
     #footer {
-      font-size: 0.9rem;
-      height: 2.7rem;
-      min-height: 2.7rem;
-      line-height: 2.7rem;
+      font-size: 1.2rem;
+      height: 3.5rem;
+      min-height: 3.5rem;
+      line-height: 3.5rem;
     }
 
     #watched-movies-toggle {
