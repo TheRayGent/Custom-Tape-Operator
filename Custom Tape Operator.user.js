@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Custom Tape Operator
 // @icon         https://tapeop.dev/assets/favicon.png
-// @version      0.0.3
+// @version      0.0.4
 // @match        https://tapeop.dev/*
 // ==/UserScript==
 
@@ -27,6 +27,7 @@
   #sources {
     justify-content: center !important;
   }
+
   @media screen and (max-width: 800px), screen and (max-height: 600px) {
     #container {
       padding: 1.5rem;
@@ -41,6 +42,10 @@
       height: 3.5rem;
       min-height: 3.5rem;
       line-height: 3.5rem;
+    }
+
+    #header {
+      padding-right: 0;
     }
 
     #watched-movies-toggle {
