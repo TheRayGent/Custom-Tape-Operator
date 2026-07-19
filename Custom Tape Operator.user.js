@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Custom Tape Operator
 // @icon         https://tapeop.dev/assets/favicon.png
-// @version      0.0.4
+// @version      0.0.5
 // @match        https://tapeop.dev/*
 // ==/UserScript==
 
@@ -20,12 +20,12 @@
 
     const style = document.createElement('style');
     style.textContent = `
-  #sources :first-child {
-	  margin-left: 0;
+   #sources :first-child {
+	  margin-left: auto;
   }
 
-  #sources {
-    justify-content: center !important;
+  #sources :last-child {
+    margin-right: auto;
   }
 
   @media screen and (max-width: 800px), screen and (max-height: 600px) {
